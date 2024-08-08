@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Библиотека</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		#admin-interface {
+			display: none;
+		}
+
+		.book {
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Библиотека</h1>
+
+	<div id="user-interface">
+		<h2>Список книг</h2>
+		<select id="sort-select">
+			<option value="title">По названию</option>
+			<option value="author">По автору</option>
+			<option value="year">По году</option>
+		</select>
+		<button onclick="sortBooks()">Сортировать</button>
+		<div id="book-list"></div>
+	</div>
+
+	<div id="admin-interface">
+		<h2>Администрирование книг</h2>
+		<input type="text" id="new-book-title" placeholder="Название книги">
+		<input type="text" id="new-book-author" placeholder="Автор">
+		<input type="number" id="new-book-year" placeholder="Год написания">
+		<button onclick="addBook()">Добавить книгу</button>
+		<div id="admin-book-list"></div>
+	</div>
+
+	<button onclick="toggleAdmin()">Переключить режим администрирования</button>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
